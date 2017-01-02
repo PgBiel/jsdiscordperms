@@ -1,2 +1,2 @@
 # jsdiscordperms
-Just to convert permission number to array of permissions.
+Just to convert permission number to array of permissions. Nothing much.
