@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/PgSuper/jsdiscordperms#readme",
   "dependencies": {
-    "discord.js": "^10.0.0"
+    "discord.js": ">=10.0.0"
   }
 }
