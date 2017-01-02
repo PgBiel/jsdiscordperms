@@ -2,7 +2,8 @@
 Some tools to help you in working with `discord.js` permissions.
 
 Made for the `discord.js` library, check it out [here](https://github.com/hydrabolt/discord.js).
-
+##Installation
+`npm install PgBiel/jsdiscordperms`
 ## Usage
 
 First set the variable.
