@@ -1,6 +1,6 @@
 const discord = require("discord.js");
 const permissions = discord.Constants.PermissionFlags;
-const readablecheck = function(permname, readable=true) {
+const convertreadable = function(permname, readable=true) {
 	if (!readable) return permname;
 	switch(permname) {
 		case "ADMINISTRATOR":
@@ -68,12 +68,12 @@ const convertperms = function(permnumber, readablenames=false) {
 	let evaluatedperms = {};
 	for (let perm in permissions) {
 		let hasperm = Boolean(permnumber & permissions[perm]);
-		evaluatedperms[readablecheck(perm, readablenames)] = hasperm;
+		evaluatedperms[convertreadable(perm, readablenames)] = hasperm;
 	}
 	return evaluatedperms;
 };
 module.exports = {
 	convertperms,
-	readablecheck,
+	convertreadable,
 	permissions
 };
