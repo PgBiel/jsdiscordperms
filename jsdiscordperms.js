@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 const permissions = discord.Constants.PermissionFlags;
-const convertreadable = function(permname, readable=true) {
-	if (!readable) return permname;
+const convertReadable = function(permName, readable=true) {
+	if (!readable) return permName;
 
 	let names = {
 		ADMINISTRATOR: "Administrator",
@@ -33,23 +33,23 @@ const convertreadable = function(permname, readable=true) {
 		USE_VAD: "Use Voice Activity"
 	};
 
-	if (!names[permname]) throw new RangeError("Invalid permission given!");
-	return names[permname];
+	if (!names[permName]) throw new RangeError("Invalid permission given!");
+	return names[permName];
 };
 
-const convertperms = function(permnumber, readablenames=false) {
-	//if readablenames is set to true, use the names at Discord instead of the names of PermissionResolvables at discord.js.
-	if (isNaN(Number(permnumber))) throw new TypeError(`Expected permissions number, and received ${typeof permnumber} instead.`);
-	permnumber = Number(permnumber);
-	let evaluatedperms = {};
+const convertPerms = function(permNumber, readableNames=false) {
+	//if readableNames is set to true, use the names at Discord instead of the names of PermissionResolvables at discord.js.
+	if (isNaN(Number(permNumber))) throw new TypeError(`Expected permissions number, and received ${typeof permNumber} instead.`);
+	permNumber = Number(permNumber);
+	let evaluatedPerms = {};
 	for (let perm in permissions) {
-		let hasperm = Boolean(permnumber & permissions[perm]);
-		evaluatedperms[convertreadable(perm, readablenames)] = hasperm;
+		let hasPerm = Boolean(permNumber & permissions[perm]);
+		evaluatedPerms[convertReadable(perm, readableNames)] = hasPerm;
 	}
-	return evaluatedperms;
+	return evaluatedPerms;
 };
 module.exports = {
-	convertperms,
-	convertreadable,
+	convertPerms,
+	convertReadable,
 	permissions
 };
