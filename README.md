@@ -11,13 +11,13 @@ First set the variable.
 ```js
 var jsdiscordperms = require("jsdiscordperms");
 ```
-The function called `convertperms` will convert any permission(s) number to a object containing all permissions and if they are positive in that or not (as boolean). (Note: Even if the permission number grants the `Administrator` permission, the object won't have all permissions as `true` just because of it.)
+The function called `convertPerms` will convert any permission(s) number to a object containing all permissions and if they are positive in that or not (as boolean). (Note: Even if the permission number grants the `Administrator` permission, the object won't have all permissions as `true` just because of it.)
 
 It takes 2 arguments, although the second is optional. The first is the permission number, and the second specifies if the returned object's properties are User-Friendly (User-Friendly permissions, such as "Use Voice Activity" instead of "USE_VAD"). The default value for the second argument is `false`.
 
 Example, with the permissions number being 103091264:
 ```js
-var permissions = jsdiscordperms.convertperms(103091264);
+var permissions = jsdiscordperms.convertPerms(103091264);
 console.log(permissions);
 ```
 At console:
@@ -56,7 +56,7 @@ If we add `true` for enabling User-Friendly permission names, the result will be
 { 'Create Instant Invite': false,
   'Kick Members': false,
   'Ban Members': false,
-  Administrator: false,
+  'Administrator': false,
   'Manage Channels': false,
   'Manage Server': false,
   'Add Reactions': true,
@@ -69,8 +69,8 @@ If we add `true` for enabling User-Friendly permission names, the result will be
   'Read Message History': true,
   'Mention Everyone': false,
   'Use External Emojis': true,
-  Connect: false,
-  Speak: true,
+  'Connect': false,
+  'Speak': true,
   'Mute Members': false,
   'Deafen Members': false,
   'Move Members': false,
@@ -82,10 +82,10 @@ If we add `true` for enabling User-Friendly permission names, the result will be
   'Manage Emojis': false }
 ```
 
-The other function, `convertreadable`, grabs a permission resolvable and returns the equivalent user-friendly permission.
+The other function, `convertReadable`, grabs a permission resolvable and returns the equivalent user-friendly permission.
 Example:
 ```js
-var permission = jsdiscordperms.convertreadable("USE_VAD");
+var permission = jsdiscordperms.convertReadable("USE_VAD");
 console.log(permission);
 ```
 At console:
