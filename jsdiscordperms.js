@@ -28,9 +28,9 @@ const permissions = { CREATE_INSTANT_INVITE: 1,
   MANAGE_WEBHOOKS: 536870912,
   MANAGE_EMOJIS: 1073741824,
   ADMINISTRATOR: 2146958463 };
-const convertReadable = function(permName, readable=true) {
+const convertReadable = function(permName, readable=true, debug=false) {
 	if (!readable) return permName;
-
+	if (debug) console.log(permName);
 	let names = {
 		ADMINISTRATOR: "Administrator",
 		MANAGE_GUILD: "Manage Server",
@@ -66,14 +66,14 @@ const convertReadable = function(permName, readable=true) {
 	return names[permName];
 };
 
-const convertPerms = function(permNumber, readableNames=false) {
+const convertPerms = function(permNumber, readableNames=false, debug=false) {
 	//if readableNames is set to true, use the names at Discord instead of the names of PermissionResolvables at discord.js.
 	if (isNaN(Number(permNumber))) throw new TypeError(`Expected permissions number, and received ${typeof permNumber} instead.`);
 	permNumber = Number(permNumber);
 	let evaluatedPerms = {};
 	for (let perm in permissions) {
 		let hasPerm = Boolean(permNumber & permissions[perm]);
-		evaluatedPerms[convertReadable(perm, readableNames)] = hasPerm;
+		evaluatedPerms[convertReadable(perm, readableNames, debug)] = hasPerm;
 	}
 	return evaluatedPerms;
 };
