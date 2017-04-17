@@ -26,7 +26,8 @@ const permissions = { CREATE_INSTANT_INVITE: 1,
   MANAGE_ROLES: 268435456,
   MANAGE_ROLES_OR_PERMISSIONS: 268435456,
   MANAGE_WEBHOOKS: 536870912,
-  MANAGE_EMOJIS: 1073741824 };
+  MANAGE_EMOJIS: 1073741824,
+  ADMINISTRATOR: 2146958463 };
 const convertReadable = function(permName, readable=true) {
 	if (!readable) return permName;
 
