@@ -33,6 +33,7 @@ const convertReadable = function(permName, readable=true) {
 	let names = {
 		ADMINISTRATOR: "Administrator",
 		MANAGE_GUILD: "Manage Server",
+		MANAGE_ROLES: "Manage Roles",
 		MANAGE_ROLES_OR_PERMISSIONS: "Manage Roles",
 		MANAGE_CHANNELS: "Manage Channels",
 		KICK_MEMBERS: "Kick Members",
