@@ -19,8 +19,5 @@
   "bugs": {
     "url": "https://github.com/PgSuper/jsdiscordperms/issues"
   },
-  "homepage": "https://github.com/PgSuper/jsdiscordperms#readme",
-  "dependencies": {
-    "discord.js": ">=10.0.0"
-  }
+  "homepage": "https://github.com/PgSuper/jsdiscordperms#readme"
 }
