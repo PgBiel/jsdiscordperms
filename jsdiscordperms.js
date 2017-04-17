@@ -52,6 +52,7 @@ const convertReadable = function(permName, readable=true, debug=false) {
 		ATTACH_FILES: "Attach Files",
 		READ_MESSAGE_HISTORY: "Read Message History",
 		MENTION_EVERYONE: "Mention Everyone",
+		USE_EXTERNAL_EMOJIS: "Use External Emojis",
 		EXTERNAL_EMOJIS: "Use External Emojis",
 		ADD_REACTIONS: "Add Reactions",
 		CONNECT: "Connect",
