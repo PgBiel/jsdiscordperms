@@ -1,6 +1,6 @@
 {
   "name": "jsdiscordperms",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Tools for working with discord.js permissions.",
   "main": "jsdiscordperms.js",
   "scripts": {
